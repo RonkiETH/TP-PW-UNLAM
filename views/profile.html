@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico - Grupo 9</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <div class="profile__info">
+                <h3 class="profile__title">Nombre de usuario</h3>
+                <a href="index.html" class="profile__link-session">Cerrar sesión</a>
+            </div>
+            <a class="profile__link" href="profile.html">
+                <img src="../img/Avatar.png" alt="Avatar" class="profile__image">
+            </a>
+        </div>
+    </header>
+    <div class="form__container">
+        <form class="form">
+            <div class="form__group">
+                <label for="username" class="form__label">Usuario</label>
+                <input 
+                    type="text" 
+                    placeholder="Usuario" 
+                    id="username" 
+                    class="form__input"
+                >
+            </div>
+            <div class="form__group">
+                <label for="password" class="form__label">Contraseña</label>
+                <input 
+                    type="password" 
+                    placeholder="Contraseña"
+                    id="password"
+                    class="form__input"
+                >
+            </div>
+            <div class="form__group form__division">
+                <label for="password-repeat" class="form__label">Repetir contraseña</label>
+                <input 
+                    type="password" 
+                    placeholder="Contraseña"
+                    id="password-repeat"
+                    class="form__input"
+                >
+            </div>
+            <div class="form__group">
+                <label for="birth-date" class="form__label">Fecha de nacimiento</label>
+                <input 
+                    type="date" 
+                    id="password"
+                    class="form__input"
+                >
+            </div>
+            <div class="form__group form__division">
+                <label for="email" class="form__label">Email</label>
+                <input 
+                    type="email" 
+                    placeholder="Email"
+                    id="email"
+                    class="form__input"
+                >
+            </div>
+            <a href="premium.html" class="form__link premium">Premium</a>
+            <a href="index.html" class="form__link premium">Eliminar usuario</a>
+            <div class="form__button-group">
+                <button class="form__input-button">
+                    <a href="home.html">Volver al home</a>
+                </button>
+                <button type="submit" class="form__input-button">Guardar</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>
+            Octavio Sancho | 39.510.073 - Tobias Rodriguez | 44.513.673 - Angel Leyes| 42.199.664
+        </p>
+        <p>
+            Ezequiel Lage | 38.175.930 - Agustin Dangelo | 44.263.625 - Juan Ignacio Ronquillo | 44.482.636
+        </p>
+    </footer>
+</body>
+</html>

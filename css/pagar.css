@@ -1,0 +1,317 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    margin-right: auto;
+    height: fit-content;
+    justify-content: end;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile {
+    display: flex;
+    width: fit-content;
+    margin-right: 0 auto;
+}
+
+.profile__info {
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.profile__link-session {
+    color: #1db954;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.profile__link-session:hover {
+    color: #ffffff;
+}
+
+.profile__image {
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+}
+
+.premium-main {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    height: 80%;
+}
+h1 {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.premium-cards-container {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.premium-card {
+    background-color: rgb(59, 59, 59);
+    color: rgb(228, 228, 228);
+    border: 2px solid rgba(211, 211, 211, 0.959);
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 200px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    box-shadow: rgba(255, 255, 255, 0.274) 0px 0px 200px;
+}
+
+.premium-card__anual {
+    background-color: rgb(235, 235, 235);
+    color: rgb(36, 36, 36);
+    border: 3px solid rgb(36, 36, 36);
+}
+
+.premium-card-heading-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+}
+
+.premium-card-span {
+    background-color: rgba(255, 187, 0, 0.377);
+    padding: 4px;
+    border-radius: 4px;
+    color: rgb(102, 73, 0);
+}
+
+.premium-card-itemList {
+    position: relative;
+    top: -30px;
+}
+
+.premium-card-img-container {
+    background-color: rgba(218, 190, 32, 0.623);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.premium-card-price {
+    font-size: 1.5rem;
+}
+
+.premium-card-discount {
+    padding: 4px;
+    border-radius: 4px;
+    color: rgb(48, 170, 88);
+    font-size: large;
+}
+
+.premium-card-itemList__item {
+    margin-top: 10px;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 5px;
+    padding: 60px 25px 60px 25px;
+    margin-top: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.form__label {
+    font-size: 12px;
+    width: 10%;
+    height: fit-content;
+    text-wrap: nowrap;
+    margin-right: 5px;
+}
+
+.form__input {
+    border: 1px solid #1DB954;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+.form__input::placeholder {
+    color: #000000;
+}
+
+.form__button-group {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.form__input-button {
+    background-color: #1DB954;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.form__input-button:hover {
+    background-color: rgba(29, 185, 84, 0.8)
+}
+
+.form__link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 14px;
+    margin: auto;
+}
+
+.form__link:hover {
+    color: #1DB954;
+    text-decoration: none;
+}
+
+.premium-card-button-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.premium-card-button {
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    transition: 0.2s;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.premium-card-button:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+.premium-card-button__cancelar:hover {
+    background-color: rgb(134, 67, 67);
+    color: white;
+}
+
+.premium-card-button__avanzar:hover {
+    background-color: rgb(67, 134, 76);
+    color: white;
+}
+
+.footer {
+    width: 98%;
+    margin-bottom: auto;
+    margin-top: 30px;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .footer {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1071px) {
+
+    .form__label {
+        text-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 787px) {
+    .footer {
+        width: 95%;
+    }
+
+    .form__input {
+        width: 100%;
+    }
+
+    .form__label {
+        text-wrap: nowrap;
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 746px) {
+    .footer {
+        display: none;
+    }
+}

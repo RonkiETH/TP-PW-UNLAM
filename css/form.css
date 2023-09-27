@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: black;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+/* Estilos del form */
+input {
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 40%;
+    border: 1px solid #1DB954;
+    border-radius: 5px;
+    padding: 60px 25px 60px 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    width: 100%;
+    margin: 3px;
+    padding: 10px;
+}
+
+.form__label {
+    font-size: 14px;
+}
+
+.form__input {
+    border: 1px solid #1DB954;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form__input::placeholder {
+    color: #000000;
+}
+
+.form__input-button {
+    background-color: #1DB954;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form__input-button:hover {
+    background-color: rgba(29, 185, 84, 0.8)
+}
+
+
+.form__link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 14px;
+    margin: auto;
+}
+
+.form__link:hover {
+    color: #1DB954;
+    text-decoration: none;
+}
+.footer {
+    width: 99%;
+    margin-bottom: auto;
+    bottom: 0;
+    position: fixed;
+    margin: 10px;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos de signup.html */
+.premium {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form__sign-in {
+    text-align: center;
+}
+
+.form p {
+    display: inline;
+}
+
+@media screen and (max-width: 1280px) {
+    .form__container {
+        width: 60%;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .form__container {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 682px) {
+    .form__container {
+        width: 75%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .footer {
+        display: none;
+    }
+}

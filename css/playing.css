@@ -1,0 +1,255 @@
+header {
+    justify-content: right;
+    align-items: center;
+}
+
+.header__title {
+    margin: 0 auto;
+}
+
+.header__title h1 {
+    text-transform: capitalize;
+}
+
+/* Estilos del footer */
+footer {
+    display: block;
+    width: 100%;
+    height: max-content;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 75px;
+    border: 2px solid #1db954;
+    border-radius: 3px;
+}
+
+.songs__container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-gap: 2px;
+    grid-template-columns: 13% repeat(4, 22%);
+    grid-template-rows: auto;
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    border: 2px solid #1db954;
+    float: auto;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: auto;
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+.songs__white {
+    background-color: ghostwhite;
+    padding: 5px;
+}
+
+.songs__category {
+    display: flex;
+    background-color: #1db954;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: larger;
+}
+
+.songs__content {
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.songs__info {
+    display: flex;
+    background-color: black;
+    padding: 11px;
+    font-weight: 800;
+    font-size: larger;
+    color: #ffffff;
+    margin: auto;
+}
+
+
+/* RESPONSIVE TABLET */
+@media (max-width: 1000px) {
+    /* HEADER */
+    body {
+        height: 100vh;
+    }
+    header {
+        display: flex;
+        font-size: medium;
+        width: 100%;
+        margin-left: auto;
+        margin-right: 10px;
+        height: fit-content;
+        justify-content: right;
+        align-items: right;
+        top: auto;
+    }
+
+    .profile__image {
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    .profile__info {
+        font-size: small;
+    }
+
+    .profile__link-session {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* MAIN */
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        font-size: 40px;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        width: 75%;
+        margin: 0 auto;
+        align-self: flex-start;
+    }
+    
+
+    .column__container {
+        width: 20%;
+    }
+
+    .songs__container {
+        width: 100%;
+        font-size: small;
+        justify-content: space-between;
+        overflow-x: scroll;
+        margin-left: 0;
+        grid-template-columns: 13% repeat(4, 28%);
+    }
+
+    .songs__button-img {
+        width: 60px;
+    }
+    .songs__image {
+        width: 100px;
+    }
+
+    .songs__star {
+        left: 60%;
+        top: 9%;
+    }
+
+    .song__article{
+        .songs__star{
+            left: 84%;
+            top: 3%;
+        }
+    }
+
+    /* FOOTER IGUAL */
+    footer {
+        display: none;
+    }
+    /* NAV IGUAL */
+}
+
+@media (max-width: 997px){
+    .song__article{
+        .songs__star{
+            left: 84%;
+            top: 3%;
+        }
+    }
+
+    .songs__star {
+        width: 20px;
+        left: 60%;
+        top: 9%;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 650px) {
+    body {
+        height: 100vh;
+    }
+
+    /* NAV Y HEADER */
+
+    nav {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    header {
+        margin: 0;
+    }
+
+    /* MAIN */
+    .column__container {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        justify-content: center;
+    }
+
+    main {
+        padding: 0;
+        width: 90%;
+        margin: 0;
+    }
+    
+    .songs__container {
+        font-size: 7px;
+        justify-content: space-between;
+        overflow-x: scroll;
+        margin-left: 0;
+        grid-template-columns: 13% repeat(4, 25%);
+    }
+
+    .songs__button-img {
+        width: 40px;
+    }
+
+    .songs__image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .songs__star{
+        left: 62%;
+    }
+
+    .songs__content{
+        margin: 0;
+    }
+}
