@@ -109,6 +109,11 @@ input {
         justify-content: center;
         align-items: center;
     }
+
+    footer {
+        margin: auto;
+        margin-top: 70px;
+    }
 }
 
 @media only screen and (max-width: 621px) {
@@ -157,9 +162,6 @@ input {
       
     }
 
-    footer {
-        display: none;
-    }
 }
 
 

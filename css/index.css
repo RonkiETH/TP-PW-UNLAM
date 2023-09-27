@@ -269,9 +269,6 @@ main {
 
 /* Estilos del footer */
 footer {
-    display: block;
-    position: fixed;
-    bottom: 0;
     width: 99%;
     height: max-content;
     background-color: #000000;
@@ -280,11 +277,13 @@ footer {
     text-align: center;
     font-weight: 400;
     margin: 0px 10px 10px 10px;
+    margin-top: 130px;
+    bottom: 0;
     border: 2px solid #1DB954;
     border-radius: 3px;
 }
 
-@media only screen and (max-width: 997px) {
+@media only screen and (max-width: 1024px) {
     .container {
         width: 75%;
         justify-content: center;
@@ -302,8 +301,11 @@ footer {
     }
 
     footer {
+        position: unset;
         width: 95%;
         margin-left: 25px;
+        margin-top: 10px;
+        bottom: 0;
     }
 
     .audio__section {
@@ -384,10 +386,6 @@ footer {
         width: 20%;
         left: 75%;
     }
-
-    footer {
-        display: none;
-    }
 }
 
 
@@ -404,5 +402,12 @@ footer {
     .songs__star {
         width: 20%;
         left: 70%;
+    }
+
+    footer {
+        font-size: 10px;
+        /* margin: auto; */
+        margin-left: 10px;
+        margin-bottom: 3px;
     }
 }

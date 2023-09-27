@@ -87,8 +87,22 @@ footer {
 }
 
 
+@media (max-width: 1280px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .header__title h1{
+        margin-right: 300px;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+    }
+
+}
+
 /* RESPONSIVE TABLET */
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     /* HEADER */
     body {
         height: 100vh;
@@ -104,6 +118,15 @@ footer {
         align-items: right;
         top: auto;
     }
+
+    .header__title h1{
+        margin-right: 115px;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+    }
+
+    
 
     .profile__image {
         width: 50px;
@@ -140,7 +163,7 @@ footer {
     
 
     .column__container {
-        width: 20%;
+        width: 21%;
     }
 
     .songs__container {
@@ -164,12 +187,13 @@ footer {
         top: 9%;
     }
 
-    
-
-    /* FOOTER IGUAL */
     footer {
-        display: none;
+        position: unset;
+        margin: auto;
+        margin-top: 5px;
+        bottom: 0;
     }
+    
     /* NAV IGUAL */
 }
 
