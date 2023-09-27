@@ -11,6 +11,10 @@ header {
     text-transform: capitalize;
 }
 
+.flecha__link {
+    display: none;
+}
+
 /* Estilos del footer */
 footer {
     display: block;
@@ -161,12 +165,7 @@ footer {
         top: 9%;
     }
 
-    .song__article{
-        .songs__star{
-            left: 84%;
-            top: 3%;
-        }
-    }
+    
 
     /* FOOTER IGUAL */
     footer {
@@ -175,13 +174,7 @@ footer {
     /* NAV IGUAL */
 }
 
-@media (max-width: 997px){
-    .song__article{
-        .songs__star{
-            left: 84%;
-            top: 3%;
-        }
-    }
+@media (max-width: 997px) {
 
     .songs__star {
         width: 20px;
@@ -196,6 +189,10 @@ footer {
         height: 100vh;
     }
 
+    .flecha__link {
+        display: block;
+    }
+
     /* NAV Y HEADER */
 
     nav {
@@ -208,6 +205,7 @@ footer {
 
     header {
         margin: 0;
+        justify-content: space-between;
     }
 
     /* MAIN */
