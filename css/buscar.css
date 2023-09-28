@@ -78,25 +78,25 @@ input {
 }
 
 @media only screen and (max-width: 820px) {
-    .container {
+    /* .container {
         width: 63%;
     }
 
     .column__container {
         width: 35%;
-    }
+    } */
 
-    .songs__section {
+    /* .songs__section {
         height: 50vh;
     }
 
     .songs__article {
         width: 100%;
-    }
+    } */
 
     .profile__info h3 {
         display: none;
-    }
+    } 
 
     .search__section{
         width: 60%;
@@ -197,7 +197,9 @@ input {
     }
 
     .search__input::placeholder {
+        display: none;
         font-size: 12px;
+        color: transparent;
     }
     
     .search__image{

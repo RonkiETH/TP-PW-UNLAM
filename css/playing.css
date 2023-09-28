@@ -1,14 +1,19 @@
-header {
-    justify-content: right;
-    align-items: center;
+body{
+    display: flex;
+    overflow-y: scroll;
+    height: fit-content !important;
+    
 }
 
-.header__title {
-    margin: 0 auto;
+header {
+    justify-content: right;
 }
 
 .header__title h1 {
+    justify-content: right;
+    align-items: flex-start;
     text-transform: capitalize;
+    margin-right: auto;
 }
 
 .flecha__link {
@@ -17,9 +22,7 @@ header {
 
 /* Estilos del footer */
 footer {
-    display: block;
-    width: 100%;
-    height: max-content;
+    width: 98%;
     background-color: #000000;
     color: #ffffff;
     padding: 10px;
@@ -27,7 +30,8 @@ footer {
     font-weight: 400;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 75px;
+    margin-top: 20px;
+    bottom: 0;
     border: 2px solid #1db954;
     border-radius: 3px;
 }
@@ -105,7 +109,7 @@ footer {
 @media (max-width: 1024px) {
     /* HEADER */
     body {
-        height: 100vh;
+        /* height: 100vh; */
     }
     header {
         display: flex;
@@ -198,18 +202,40 @@ footer {
 }
 
 @media (max-width: 997px) {
+    body{
+        overflow-y: scroll;
+        height: fit-content;
+    }
 
     .songs__star {
         width: 20px;
         left: 60%;
         top: 9%;
     }
+
+    .container{
+        width: 70%;
+        height: auto;
+    }
+
+    .column__container{
+        height: fit-content;
+    }
+
+    footer{
+        font-size: 10px;
+        width: fit-content;
+    }
+
+    aside{
+        margin-top: 0;
+    }
 }
 
 /* RESPONSIVE MOBILE */
 @media (max-width: 650px) {
     body {
-        height: 100vh;
+        
     }
 
     .flecha__link {
@@ -273,4 +299,50 @@ footer {
     .songs__content{
         margin: 0;
     }
+
+    footer{
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+
+    }
+}
+
+@media (max-width: 1024px){
+   .song__article{
+    .songs__star{
+        width: 25%;
+        top: 7px;
+        left: 70%;
+    }
+   }
+
+   footer{
+    width: 95%;
+    margin-bottom: 10px;
+   }
+} 
+
+@media (max-width: 820px){
+    body{
+
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .songs__container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container{
+        height: 100%;
+    }
+
+    footer{
+        margin-top: 0 auto;
+    }
+
 }

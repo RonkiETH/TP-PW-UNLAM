@@ -202,22 +202,15 @@ header {
 
 
 .footer {
-    width: 99%;
+    width: 95%;
     margin-bottom: auto;
     margin-top: 30px;
     bottom: 0;
-    position: fixed;
     margin: 10px;
     border: 2px solid #1DB954;
     border-radius: 3px;
     text-align: center;
     padding: 10px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .footer {
-        display: none;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -241,6 +234,10 @@ header {
 
     .header__title h1 {
         margin: 0 auto;
+    }
+
+    .footer{
+        margin: auto;
     }
 
 }
