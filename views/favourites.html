@@ -1,214 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximumscale=1">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/playing.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
-    <title>Trabajo Practico - Grupo 9</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximumscale=1"
+        />
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/playing.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon" />
+        <title>Trabajo Practico - Grupo 9</title>
+    </head>
 
-<body>
-
-    <div class="container">
-        <header>
-            <div>
-                <a href="home.html" class="flecha__link">
-                    <img src="../img/arrow-left.png" alt="flecha" width="30px">
-                </a>
-            </div>
-            <div class="header__title">
-                <h1>Mis canciones favoritas</h1>
-            </div>
-            <div class="profile">
-                <div class="profile__info">
-                    <h3 class="profile__title">Nombre de usuario</h3>
-                    <a href="../index.html" class="profile__link-session">Cerrar sesión</a>
+    <body>
+        <div class="container">
+            <header>
+                <div>
+                    <a href="home.html" class="flecha__link">
+                        <img
+                            src="../img/arrow-left.png"
+                            alt="flecha"
+                            width="30px"
+                        />
+                    </a>
                 </div>
-                <a class="profile__link" href="profile.html">
-                    <img src="../img/Avatar.png" alt="Avatar" class="profile__image">
-                </a>
-            </div>
-        </header>
+                <div class="header__title">
+                    <h1>Mis canciones favoritas</h1>
+                </div>
+                <div class="profile">
+                    <div class="profile__info">
+                        <h3 class="profile__title">Nombre de usuario</h3>
+                        <a href="../index.html" class="profile__link-session"
+                            >Cerrar sesión</a
+                        >
+                    </div>
+                    <a class="profile__link" href="profile.html">
+                        <img
+                            src="../img/Avatar.png"
+                            alt="Avatar"
+                            class="profile__image"
+                        />
+                    </a>
+                </div>
+            </header>
 
-        <main>
-            <section class="songs__container">
-                <article class="songs__white"></article>
-                <article class="songs__category">
-                    <h4>Canción</h4>
-                </article>
-                <article class="songs__category">
-                    <h4>Album</h4>
-                </article>
-                <article class="songs__category">
-                    <h4>Duración</h4>
-                </article>
-                <article class="songs__category">
-                    <h4>Reproducciones</h4>
-                </article>
+            <main>
+                <section class="songs__container">
+                    <article class="songs__white"></article>
+                    <article class="songs__category">
+                        <h4>Canción</h4>
+                    </article>
+                    <article class="songs__category">
+                        <h4>Album</h4>
+                    </article>
+                    <article class="songs__category">
+                        <h4>Duración</h4>
+                    </article>
+                    <article class="songs__category">
+                        <h4 class="reprod__desktop">Reproducciones</h4>
+                        <h4 class="reprod__mobile">Reprod.</h4>
+                    </article>
 
-                <article class="songs__content">
-                    <img src="../img/boton play.png" alt="Reproducir" width="90px" class="songs__button-img">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/canserbero cancion 1.jpg" alt="Canserbero - Na" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/canserbero album 1.jpg" alt="Vida" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__info">
-                    <p>6:22</p>
-                </article>
-                <article class="songs__info">
-                    <p>17.135.570</p>
-                </article>
+                    <article class="songs__content">
+                        <img
+                            src="../img/boton play.png"
+                            alt="Reproducir"
+                            width="90px"
+                            class="songs__button-img"
+                        />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/canserbero cancion 1.jpg"
+                            alt="Canserbero - Na"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/canserbero album 1.jpg"
+                            alt="Vida"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__info">
+                        <p>6:22</p>
+                    </article>
+                    <article class="songs__info">
+                        <p>17.135.570</p>
+                    </article>
 
-                <article class="songs__content">
-                    <img src="../img/boton play.png" alt="Reproducir" width="90px" class="songs__button-img">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/salando las heridas cancion 2.jpg"alt="Patricio Rey y sus redonditos de ricota - Salando las heridas" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/patricio-rey-logo-3048C74D38-seeklogo.com.png"alt="Los Redondos" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__info">
-                    <p>5:02</p>
-                </article>
-                <article class="songs__info">
-                    <p>4.063.894</p>
-                </article>
+                    <article class="songs__content">
+                        <img
+                            src="../img/boton play.png"
+                            alt="Reproducir"
+                            width="90px"
+                            class="songs__button-img"
+                        />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/salando las heridas cancion 2.jpg"
+                            alt="Patricio Rey y sus redonditos de ricota - Salando las heridas"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/patricio-rey-logo-3048C74D38-seeklogo.com.png"
+                            alt="Los Redondos"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__info">
+                        <p>5:02</p>
+                    </article>
+                    <article class="songs__info">
+                        <p>4.063.894</p>
+                    </article>
 
-                <article class="songs__content">
-                    <img src="../img/boton play.png" alt="Reproducir" width="90px" class="songs__button-img">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/ciro cancion 3.jpg" alt="Ciro - Sigue y No Cedas" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__content"><img class="songs__image" src="../img/ciro album 3.jpg" alt="Ciro - Sigue y No Cedas" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__info">
-                    <p>5:03</p>
-                </article>
-                <article class="songs__info">
-                    <p>11.934.304</p>
-                </article>
+                    <article class="songs__content">
+                        <img
+                            src="../img/boton play.png"
+                            alt="Reproducir"
+                            width="90px"
+                            class="songs__button-img"
+                        />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/ciro cancion 3.jpg"
+                            alt="Ciro - Sigue y No Cedas"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/ciro album 3.jpg"
+                            alt="Ciro - Sigue y No Cedas"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__info">
+                        <p>5:03</p>
+                    </article>
+                    <article class="songs__info">
+                        <p>11.934.304</p>
+                    </article>
 
-                <article class="songs__content">
-                    <img src="../img/boton play.png" alt="Reproducir" width="90px" class="songs__button-img">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/wos cancion 4.jpg" alt="Wos - Live Set" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/wos cancion 4.jpg" alt="Wos - Live Set" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star"></article>
-                <article class="songs__info">
-                    <p>11:00</p>
-                </article>
-                <article class="songs__info">
-                    <p>34.581.113</p>
-                </article>
+                    <article class="songs__content">
+                        <img
+                            src="../img/boton play.png"
+                            alt="Reproducir"
+                            width="90px"
+                            class="songs__button-img"
+                        />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/wos cancion 4.jpg"
+                            alt="Wos - Live Set"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/wos cancion 4.jpg"
+                            alt="Wos - Live Set"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__info">
+                        <p>11:00</p>
+                    </article>
+                    <article class="songs__info">
+                        <p>34.581.113</p>
+                    </article>
 
-                <article class="songs__content">
-                    <img src="../img/boton play.png" alt="Reproducir" width="90px" class="songs__button-img">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/tupac album 5.jpg" alt="Wos - Live Set" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/tupac album 5.jpg" alt="Wos - Live Set" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__info">
-                    <p>4:57</p>
-                </article>
-                <article class="songs__info">
-                    <p>24.966.867</p>
-                </article>
+                    <article class="songs__content">
+                        <img
+                            src="../img/boton play.png"
+                            alt="Reproducir"
+                            width="90px"
+                            class="songs__button-img"
+                        />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/tupac album 5.jpg"
+                            alt="Wos - Live Set"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/tupac album 5.jpg"
+                            alt="Wos - Live Set"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__info">
+                        <p>4:57</p>
+                    </article>
+                    <article class="songs__info">
+                        <p>24.966.867</p>
+                    </article>
 
-                <article class="songs__content">
-                    <img src="../img/boton play.png" alt="Reproducir" width="90px" class="songs__button-img">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/Idontwanttomissathing cancion 6.jpg" alt="Wos - Live Set" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__content">
-                    <img class="songs__image" src="../img/aerosmith album 6.jpeg" alt="Wos - Live Set" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-                <article class="songs__info">
-                    <p>4:52</p>
-                </article>
-                <article class="songs__info">
-                    <p>580.794.918</p>
+                    <article class="songs__content">
+                        <img
+                            src="../img/boton play.png"
+                            alt="Reproducir"
+                            width="90px"
+                            class="songs__button-img"
+                        />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/Idontwanttomissathing cancion 6.jpg"
+                            alt="Wos - Live Set"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__content">
+                        <img
+                            class="songs__image"
+                            src="../img/aerosmith album 6.jpeg"
+                            alt="Wos - Live Set"
+                            width="201vh"
+                        />
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                    <article class="songs__info">
+                        <p>4:52</p>
+                    </article>
+                    <article class="songs__info">
+                        <p>580.794.918</p>
+                    </article>
+                </section>
+            </main>
+            <section class="audio__section">
+                <article class="audio__article">
+                    <audio
+                        controls="audio"
+                        id="audio"
+                        preload="auto"
+                        tabindex="auto"
+                        type="audio/mpeg"
+                        muted="auto"
+                        class="audio"
+                    ></audio>
                 </article>
             </section>
-        </main>
-        <section class="audio__section">
-            <article class="audio__article">
-                <audio controls="audio" id="audio" preload="auto" tabindex="auto" type="audio/mpeg" muted="auto"
-                    class="audio">
-                </audio>
-            </article>
-        </section>
-    </div>
+        </div>
 
-    <div class="column__container">
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="home.html">Home</a>
-                </li>
-    
-                <li>
-                    <a href="search.html">Buscar</a>
-                </li>
-    
-                <li>
-                    <a href="albums.html">Mis albums</a>
-                </li>
-    
-                <li class="active">
-                    <a href="favourites.html">Mis Favoritas</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="column__container">
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
 
-        <aside>
-            <section class="song__section">
-                <article class="song__article">
-                    <img src="../img/Cancion12.webp" alt="Canción sonando" class="song__image">
-                    <p class="song__description">
-                        <b>
-                            Random Access Memories es el cuarto y último álbum de estudio del dúo francés Daft Punk. Se publicó en Australia, Reino Unido y Estados Unidos, bajo licencia de Daft Life
-                        </b>
-                    </p>
-                    <img src="../img/estrella.png" class="songs__star">
-                </article>
-            </section>
-        </aside>
-    </div>
+                    <li>
+                        <a href="search.html">Buscar</a>
+                    </li>
 
+                    <li>
+                        <a href="albums.html">Mis albums</a>
+                    </li>
 
-    <footer>
-        <p>Octavio Sancho | 39.510.073 - Tobias Rodriguez | 44.513.673 - Angel Leyes| 42.199.664</p>
-        <p>Ezequiel Lage | 38.175.930 - Agustin Dangelo | 44.263.625 - Juan Ignacio Ronquillo | 44.482.636</p>
-    </footer>
-</body>
+                    <li class="active">
+                        <a href="favourites.html">Mis Favoritas</a>
+                    </li>
+                </ul>
+            </nav>
 
+            <aside>
+                <section class="song__section">
+                    <article class="song__article">
+                        <img
+                            src="../img/Cancion12.webp"
+                            alt="Canción sonando"
+                            class="song__image"
+                        />
+                        <p class="song__description">
+                            <b>
+                                Random Access Memories es el cuarto y último
+                                álbum de estudio del dúo francés Daft Punk. Se
+                                publicó en Australia, Reino Unido y Estados
+                                Unidos, bajo licencia de Daft Life
+                            </b>
+                        </p>
+                        <img src="../img/estrella.png" class="songs__star" />
+                    </article>
+                </section>
+            </aside>
+        </div>
+
+        <footer>
+            <p>
+                Octavio Sancho | 39.510.073 - Tobias Rodriguez | 44.513.673 -
+                Angel Leyes| 42.199.664
+            </p>
+            <p>
+                Ezequiel Lage | 38.175.930 - Agustin Dangelo | 44.263.625 - Juan
+                Ignacio Ronquillo | 44.482.636
+            </p>
+        </footer>
+    </body>
 </html>

@@ -18,7 +18,7 @@ header {
     margin-left: auto;
     height: fit-content;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -28,11 +28,6 @@ header {
     text-align: start;
     justify-content: center;
     align-items: center;
-
-}
-
-.header__title h1 {
-    margin-left: 250px;
 }
 
 .profile {
@@ -72,10 +67,10 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 70vw;
+    width: 95vw;
     height: max-content;
     margin: 0 auto;
-    gap: 20px;
+    gap: 10px;
 }
 
 .premium-card {
@@ -83,10 +78,10 @@ header {
     color: rgb(228, 228, 228);
     border: 2px solid rgba(211, 211, 211, 0.959);
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     min-width: 200px;
     width: 300px;
-    height: 500px;
+    height: 450px;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -160,8 +155,6 @@ header {
     margin-top: 10px;
 }
 
-
-
 .premium-card-button-container {
     display: flex;
     flex-flow: row wrap;
@@ -199,32 +192,55 @@ header {
     color: white;
 }
 
-
-
 .footer {
     width: 95%;
     margin-bottom: auto;
     margin-top: 30px;
     bottom: 0;
     margin: 10px;
-    border: 2px solid #1DB954;
+    border: 2px solid #1db954;
     border-radius: 3px;
     text-align: center;
     padding: 10px;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+    .premium-card {
+        width: 200px;
+        height: 450px;
+        gap: 0px;
+    }
+    .premium-card-title {
+        font-size: 1.2rem;
+        text-align: start;
+        white-space: nowrap;
+    }
+    .premium-card-heading-container {
+        gap: 5px;
+        justify-content: space-between;
+    }
+    .premium-card-span {
+        width: 30%;
+        font-size: small;
+    }
+    .premium-card-itemList {
+        font-size: small;
+    }
+}
+
 @media only screen and (max-width: 768px) {
+    .premium-cards-container {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
     .premium-card-button-container {
         margin-bottom: 200px;
         gap: 20px;
     }
 
     .premium-card {
-        padding: 10px;
-        min-width: 200px;
-        width: 300px;
-        height: 450px;
-        display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
         align-items: center;
@@ -232,14 +248,13 @@ header {
         box-shadow: rgba(255, 255, 255, 0.274) 0px 0px 200px;
     }
 
-    .header__title h1 {
+    .header__title {
         margin: 0 auto;
     }
 
-    .footer{
+    .footer {
         margin: auto;
     }
-
 }
 
 @media only screen and (min-width: 768px) {

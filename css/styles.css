@@ -1,0 +1,269 @@
+/* Estilos generales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+label {
+    color: rgb(255, 255, 255);
+}
+
+/* Estilos del header y del nav */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: #1DB954;
+}
+
+.column_container {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+}
+
+/* Estilos del header */
+header {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #ffffff;
+    margin-left: auto;
+}
+
+.header__title {
+    display: flex;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.header__title h1 {
+    text-transform: uppercase;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile__info {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.profile__link-session {
+    color: #1DB954;
+    text-decoration: underline;
+    font-size: 15px;
+    margin-right: auto;
+}
+
+.profile__link-session:hover {
+    color: #ffffff;
+}
+
+.profile__image {
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+}
+
+/* Estilos del nav */
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 3px;
+    margin-bottom: 40px;
+
+    background-color: #000000;
+    align-items: center;
+    text-align: center;
+    order: -1;
+}
+
+.Menu {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Menu li {
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: 1px solid #1DB954;
+    border-radius: 5px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    cursor: pointer;
+}
+
+.Menu li:hover {
+    background-color: #1DB954;
+    color: #000000;
+}
+
+.Menu li:hover a{
+    color: #000000;
+}
+
+.Menu li a {
+    width: 100%;
+    color: #ffffff;
+}
+
+/* Estilos del content container */
+.content__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Estilos del main */
+main {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 27px;
+}
+
+/* Estilos de las canciones */
+.songs__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    width: 99%;
+    padding: 10px;
+    overflow-y: scroll;
+    height: 900px;
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.songs__article {
+    width: 32%;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.songs__image {
+    width: 90%;
+    height: 90%;
+    border: 2px solid #1DB954;
+    display: block;
+}
+
+/* Porcentajes, responsive, usar em, también con responsive */
+.bi, 
+.bi-star {
+    color: #1DB954;
+    position: absolute;
+    top: 5px;
+    right: 60px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.bi:hover,
+.bi-star:hover {
+    color: rgb(29, 185, 84, 0.5)
+}
+
+/* Estilos de la canción sonando */
+aside {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-left: 7px;
+} 
+
+.song__section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;  
+    margin-bottom: 70px;
+} 
+
+.song__article {
+    padding: 5px;
+    width: 100%;
+}
+
+.song__image {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #1DB954;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.song__description {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+/* Estilo del audio */
+.audio__section {
+    display: flex;
+    width: 74.3%;
+    margin-left: auto;
+    margin-right: 78px;
+    margin-bottom: 30px;
+}
+
+.audio__article {
+    text-align: center;
+    width: 100%;
+    background-color: #1DB954;
+    border-radius: 5px;
+    padding: 10px 5px 10px 5px;
+    /* margin-left: auto; */
+}
+
+.audio {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Estilos del footer */
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+}
