@@ -112,8 +112,23 @@ a {
 .form__input-button:hover {
     background-color: rgba(29, 185, 84, 0.8)
 }
+.form__input-savebutton {
+    width: 35%;
+    background-color: #1DB954;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
 
-.form__link {
+.form__input-savebutton:hover {
+    background-color: rgba(29, 185, 84, 0.8)
+}
+
+.form__linkProfile {
     color: #1DB954;
     text-decoration: underline;
     font-size: 16px;
@@ -124,7 +139,22 @@ a {
     padding-bottom: 20px;
 }
 
-.form__link:hover {
+.form__linkProfile:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+.form__linkpremium {
+    color: #1DB954;
+    text-decoration: underline;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form__linkpremium:hover {
     color: #ffffff;
     text-decoration: none;
 }
@@ -132,7 +162,69 @@ a {
 .footer {
     margin-top: 5px;
 }
+.dialogSave{
+    
+    position: relative;
+    background-color: #000000;
+    margin-left: 40%;
+    top: 60%;
+    width: 15%;
+    height: 10%;
+    border:1px solid #1DB954;
+    border-radius: 3px;
+    text-align: center;
+}
 
+
+.textSaveChanges{
+   
+   
+    margin-left: 2px ;
+    color: white;
+
+}
+.dialogSaveBtn{
+    background-color: #000000;
+    margin: 10px;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+    padding: 7px;
+    color: #ffffff;
+    width: 30%;
+}
+.closeButton{
+    background-color: #000000;
+    margin: 10px;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+    padding: 7px;
+    color: #ffffff;
+    width: 30%;
+}
+
+.dialogSaveBtn:hover{
+    background-color: rgba(29, 185, 84, 0.8)
+
+}
+.closeButton:hover{
+    background-color: rgba(29, 185, 84, 0.8)
+}
+@media only screen and (max-width: 1440px) {
+.dialogSave{
+width: 20%;
+top: 55%;
+}
+
+}
+
+@media only screen and (max-width: 1024px){
+    .dialogSave{
+        width: 25%;
+        height: 12%;
+        top: 60%;
+    }
+    
+} 
 @media only screen and (max-width: 777px) {
     .footer {
         display: none;
@@ -158,6 +250,13 @@ a {
     .form__input-button {
         text-wrap: nowrap;
     }
+    .dialogSave{
+        width: 32%;
+        height: 12%;
+        top: 85%;
+    }
+
+
 }
 
 @media only screen and (max-width: 621px) {
@@ -183,4 +282,28 @@ a {
         padding: 5%;
         margin-bottom: 10px;
     }
+    .dialogSave{
+        
+        width: 55%;
+        height: 12%;
+        top: 76%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .dialogSave{
+        
+        width: 40%;
+        height: 12%;
+        top: 76%;
+    }
+    .textSaveChanges{
+        font-size: smaller;
+    }
+    .dialogSaveBtn{
+       font-size: smaller;
+    }
+    .closeButton{
+        font-size: smaller;
+    }
+
 }

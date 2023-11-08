@@ -249,7 +249,11 @@ main {
 
 .songs__star:hover,
 .song__star:hover {
-    opacity: 0.8;
+    opacity: 0.5;
+}
+
+.selected {
+    opacity: 0.5;
 }
 
 /* Estilo del audio */
@@ -424,8 +428,8 @@ footer {
         top: 7%;
     }
 
-    .song__article {
-    }
+    /* .song__article {
+    } */
 
     footer {
         font-size: 10px;

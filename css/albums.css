@@ -1,3 +1,7 @@
 .header__title h1 {
     text-transform: unset;
 }
+
+.songs__section {
+    justify-content:unset
+}

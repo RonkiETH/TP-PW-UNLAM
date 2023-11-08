@@ -120,11 +120,66 @@ a {
     display: inline;
 }
 
+.dialogSignIn{
+    position: relative;
+    background-color: #000000;
+    margin-left: 40%;
+    top: 20%;
+    width: 20%;
+    border:1px solid #1DB954;
+    border-radius: 3px;
+}
+.dialogSignUp{
+    position: relative;
+    background-color: #000000;
+    margin-left: 40%;
+    top: 5%;
+    width: 20%;
+    border:1px solid #1DB954;
+    border-radius: 3px;
+}
+.dialogTextIncorrect,
+.dialogTextSuccess{
+    background-color: #000000;
+    margin: 10px;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.dialogTextPasswordNotMatch{
+    background-color: #000000;
+    margin: 10px;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+    padding: 10px;
+    color: #ffffff;
+}
+.buttonDialog{
+    background-color: #000000;
+    margin: 10px;
+    border: 2px solid #1DB954;
+    border-radius: 3px;
+    padding: 10px;
+    color: #ffffff;
+    width: 30%;
+}
+
 @media screen and (max-width: 1280px) {
     .form__container {
         width: 60%;
     }
-
+    .dialogSignIn{
+        width: 30%;
+        margin-left: 36%;
+        top: 18%;
+    }
+    .dialogSignUp{
+        width: 30%;
+        margin-left: 36%;
+        top: 3%;
+    }
     .footer {
         font-size: 14px;
     }
@@ -134,17 +189,47 @@ a {
     .form__container {
         width: 75%;
     }
+    .dialogSignIn{
+        width: 40%;
+        margin-left: 32%;
+        top: 18%;
+    }
+    .dialogSignUp{
+        width: 35%;
+        margin-left: 34%;
+        top: 1.5%;
+    }
 }
 
 @media screen and (max-width: 682px) {
     .form__container {
         width: 75%;
     }
-
     .form {
         width: 100%;
     }
-
+    .dialogSignIn{
+        width: 45%;
+        margin-left: 28%;
+        top: 13%;
+        font-size: smaller;
+    }
+    .dialogSignUp{
+        width: 45%;
+        margin-left: 28%;
+        top: 1%;
+        font-size: x-small;
+    }
+    .buttonDialog{
+        width: 50%;
+        font-size: x-small;
+    }
+    .dialogTextIncorrect{
+        font-size: smaller;
+    }
+    .dialogTextSuccess{
+        font-size: smaller;
+    }
     .footer {
         display: none;
     }

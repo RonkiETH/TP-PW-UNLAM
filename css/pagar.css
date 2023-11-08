@@ -280,6 +280,23 @@ h1 {
     padding: 10px;
 }
 
+.error-container {
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.error-show {
+    display: flex;
+}
+
+.error-message{
+    color: red;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 1535px) {
     .footer {
         width: 90%;
@@ -308,4 +325,77 @@ h1 {
         width: 100%;
         font-size: 16px;
     }
+}
+
+/* CLASES DE PREMIUM */
+
+.premium-card {
+    background-color: rgb(59, 59, 59);
+    color: rgb(228, 228, 228);
+    border: 2px solid rgba(211, 211, 211, 0.959);
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 200px;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    box-shadow: rgba(255, 255, 255, 0.274) 0px 0px 200px;
+}
+
+.premium-card__anual {
+    background-color: rgb(235, 235, 235);
+    color: rgb(36, 36, 36);
+    border: 3px solid rgb(36, 36, 36);
+}
+
+.premium-card-heading-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+}
+
+.premium-card-span {
+    background-color: rgba(255, 187, 0, 0.377);
+    padding: 4px;
+    border-radius: 4px;
+    color: rgb(102, 73, 0);
+}
+
+.premium-card-itemList {
+    position: relative;
+    top: -30px;
+}
+
+.premium-card-itemList__item {
+    margin-top: 10px;
+    text-align: start;
+}
+
+.premium-card-img-container {
+    background-color: rgba(218, 190, 32, 0.623);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.premium-card-price {
+    font-size: 1.5rem;
+}
+
+.premium-card-discount {
+    padding: 4px;
+    border-radius: 4px;
+    color: rgb(48, 170, 88);
+    font-size: large;
+}
+
+.premium-card-img-container__infinito {
+    background-color: rgba(45, 138, 201, 0.623);
+    padding: 5px;
+    border-radius: 4px;
 }

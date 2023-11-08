@@ -16,6 +16,11 @@ input {
     position: relative;
 }
 
+.songs__section {
+    justify-content: flex-start;
+    color: #ffffff;
+}
+
 .search__input {
     width: 100%;
     height: 100%;

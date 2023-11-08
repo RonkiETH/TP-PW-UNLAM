@@ -18,8 +18,8 @@
         <header>
             <div class="profile">
                 <div class="profile__info">
-                    <h3 class="profile__title">Nombre de usuario</h3>
-                    <a href="../index.html" class="profile__link-session"
+                    <h3 class="profile__title" id="profile-title">Nombre de usuario</h3>
+                    <a href="../index.html" class="profile__link-session" id="profile-link-session"
                         >Cerrar sesión</a
                     >
                 </div>
@@ -33,62 +33,12 @@
             </div>
         </header>
         <main class="premium-main">
-            <h1>Elegiste el plan anual</h1>
-            <section class="premium-cards-container">
-                <article class="premium-card premium-card__anual">
-                    <div class="premium-card-heading-container">
-                        <h2>Plan anual</h2>
-                        <span class="premium-card-span">El más elegido</span>
-                    </div>
-                    <ul class="premium-card-itemList">
-                        <li class="premium-card-itemList__item">
-                            Todos los beneficios del Plan mensual
-                        </li>
-                        <li class="premium-card-itemList__item">
-                            Descuento especial
-                        </li>
-                        <li class="premium-card-itemList__item">
-                            Primer mes gratuito
-                        </li>
-                    </ul>
-                    <div class="premium-card-img-container">
-                        <img
-                            class="premium-card-img"
-                            src="../img/star-filled.png"
-                            alt="star"
-                            width="20px"
-                        />
-                        <img
-                            class="premium-card-img"
-                            src="../img/star-filled.png"
-                            alt="star"
-                            width="20px"
-                        />
-                        <img
-                            class="premium-card-img"
-                            src="../img/star-filled.png"
-                            alt="star"
-                            width="20px"
-                        />
-                        <img
-                            class="premium-card-img"
-                            src="../img/star-filled.png"
-                            alt="star"
-                            width="20px"
-                        />
-                        <img
-                            class="premium-card-img"
-                            src="../img/star-filled.png"
-                            alt="star"
-                            width="20px"
-                        />
-                    </div>
-                    <h3 class="premium-card-price">$ 44.99 / Mes</h3>
-                    <span class="premium-card-discount">25% de Descuento</span>
-                </article>
+            <h1>Elegiste el plan: </h1>
+            <section class="premium-cards-container" id="plan-container">
+                No se escogio ningun plan
             </section>
             <div class="form__container">
-                <form class="form">
+                <form class="form" id="premium-form">
                     <div class="form__group">
                         <label for="card" class="form__label">Tarjeta</label>
                         <input
@@ -97,6 +47,7 @@
                             id="card"
                             class="form__input"
                         />
+
                         <label for="vto" class="form__label">VTO</label>
                         <input type="date" id="vto" class="form__input" />
                     </div>
@@ -108,6 +59,7 @@
                             id="cvc"
                             class="form__input"
                         />
+
                         <label for="fullname" class="form__label"
                             >Nombre y apellido</label
                         >
@@ -118,12 +70,16 @@
                             class="form__input"
                         />
                     </div>
+                    <div id="error-container" class="error-message">
+                        <p id="cardError"></p>
+                        <p id="cvcError"></p>
+                    </div>
                     <div class="form__button-group">
-                        <button type="button" class="form__input-button">
-                            <a href="index.html">Cancelar</a>
+                        <button type="button" class="form__input-button" onclick="cancelar()">
+                            <a href="premium.html">Cancelar</a>
                         </button>
-                        <button type="button" class="form__input-button">
-                            <a href="index.html">Pagar</a>
+                        <button type="button" class="form__input-button" onclick="validarCampos()">
+                            Pagar
                         </button>
                     </div>
                 </form>
@@ -139,5 +95,7 @@
                 Ignacio Ronquillo | 44.482.636
             </p>
         </footer>
+        <script src="../js/getPlanPremium.js"></script>
+        <script src="../js/pagar.js"></script>
     </body>
 </html>

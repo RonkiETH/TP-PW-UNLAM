@@ -1,49 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/premium.css" />
-        <!-- Fuente -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <title>Premium</title>
-    </head>
-    <body>
-        <header>
-            <div>
-                <h1 class="header__title">Planes Premium</h1>
-            </div>
-            <div class="profile">
-                <div class="profile__info">
-                    <h3 class="profile__title" id="profile-title">
-                        Nombre de usuario
-                    </h3>
-                    <a
-                        href="../index.html"
-                        class="profile__link-session"
-                        id="profile-link-session"
-                        >Cerrar sesión</a
-                    >
-                </div>
-                <a class="profile__link" href="profile.html">
-                    <img
-                        src="../img/Avatar.png"
-                        alt="Avatar"
-                        class="profile__image"
-                    />
-                </a>
-            </div>
-        </header>
-        <main class="premium-main">
-            <div class="error__message" id="error-msg">Debe elegir un plan para continuar!</div>
+document.addEventListener('DOMContentLoaded', () => {
+    // Obtengo el ID de la URL
+    let urlParams = new URLSearchParams(window.location.search);
+    let selectedPlan = urlParams.get('plan');
 
-            <form action="#" method="get" class="premium-cards-container" id="submit-form">
+    let planContainer = document.getElementById('plan-container');
+
+    switch (selectedPlan) {
+        case 'plan-mensual':
+            planContainer.innerHTML = `
                 <article class="premium-card">
                     <h2 class="premium-card-title" id="plan-premium">
                         Plan mensual
@@ -78,13 +42,12 @@
                         />
                     </div>
                     <h3 class="premium-card-price">$ 4.99 / Mes</h3>
-                    <input
-                        type="radio"
-                        name="option"
-                        class="premium-card-radio-button"
-                        id="plan-mensual"
-                    />
                 </article>
+            `;
+            break;
+    
+        case 'plan-anual':
+            planContainer.innerHTML = `
                 <article class="premium-card premium-card__anual">
                     <div class="premium-card-heading-container">
                         <h2 class="premium-card-title" id="plan-premium">
@@ -137,13 +100,12 @@
                     </div>
                     <h3 class="premium-card-price">$ 44.99 / Mes</h3>
                     <span class="premium-card-discount">25% de Descuento</span>
-                    <input
-                        type="radio"
-                        name="option"
-                        class="premium-card-radio-button"
-                        id="plan-anual"
-                    />
                 </article>
+            `;
+            break;
+        
+        case 'plan-infinito':
+            planContainer.innerHTML = `
                 <article class="premium-card">
                     <h2 class="premium-card-title" id="plan-premium">
                         Plan infinito
@@ -180,47 +142,10 @@
                         />
                     </article>
                     <h3 class="premium-card-price">$ 2999.99 / Mes</h3>
-                    <input
-                        type="radio"
-                        name="option"
-                        class="premium-card-radio-button"
-                        id="plan-infinito"
-                    />
                 </article>
-                <section class="premium-card-button-container">
-                    <article>
-                        <a href="index.html">
-                            <button
-                                class="premium-card-button premium-card-button__cancelar"
-                                type="button"
-                            >
-                                ← CANCELAR
-                            </button>
-                        </a>
-                    </article>
-                    <article>
-                        <button
-                            class="premium-card-button premium-card-button__avanzar"
-                            id="next-button"
-                            type="subtmit"
-                        >
-                            AVANZAR →
-                        </button>
-                    </article>
-                </section>
-            </form>
-        </main>
-        <footer class="footer">
-            <p>
-                Octavio Sancho | 39.510.073 - Tobias Rodriguez | 44.513.673 -
-                Angel Leyes| 42.199.664
-            </p>
-            <p>
-                Ezequiel Lage | 38.175.930 - Agustin Dangelo | 44.263.625 - Juan
-                Ignacio Ronquillo | 44.482.636
-            </p>
-        </footer>
-
-        <script src="../js/premium.js"></script>
-    </body>
-</html>
+            `;
+            break;
+        default:
+            break;
+    }
+});
