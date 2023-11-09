@@ -220,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Actualizar el array de usuarios en el localStorage
             users[userIndex] = loggedInUsername
             localStorage.setItem('users', JSON.stringify(users));
+            
 
             cancionesContainer.innerHTML = `
                 <article class="songs__white">
@@ -238,8 +239,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 </article>
             `;
             mostrarCancionesFavoritas(cancionesContainer);
+            document.location.reload();
         });
     });
+    
 
     // Marcar las estrellas según los álbumes favoritos del usuario
     favoritos.forEach((albumName) => {
