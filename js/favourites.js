@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function cargarCancionesFavoritas() {
-        const cancionesFavoritas = localStorage.getItem("cancionesFavoritas");
-        return cancionesFavoritas ? JSON.parse(cancionesFavoritas) : [];
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        return user.cancionesFavoritas ? user.cancionesFavoritas : [];
     }
 
     // Función para guardar los álbumes favoritos en el localStorage
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Cargar los álbumes favoritos existentes desde el localStorage
     const favoritos = cargarAlbumsFavoritos();
     const cancionesFavoritas = cargarCancionesFavoritas();
+    console.log(cancionesFavoritas);
 
     // Iterar a través de los elementos
     songsArticles.forEach((article) => {
@@ -86,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Al hacer click se actualiza la imagen de la cancion sonando y el texto
     const cancion1 = document.querySelector("#song__first");
-    const cancion2 = document.querySelector("#song__second");
     const cancion3 = document.querySelector("#song__third");
     const cancion4 = document.querySelector("#song__fourth");
     const cancion5 = document.querySelector("#song__fifth");
@@ -94,18 +94,36 @@ document.addEventListener("DOMContentLoaded", function() {
     const songAside = document.querySelector(".song__image");
     const texto = document.querySelector(".song__description");
 
+
+    if(loggedInUsername.cancionSonando === "Canserbero - Na"){
+        songAside.src= '../img/canserbero cancion 1.jpg';
+        texto.textContent = "La canción Na de Canserbero es una canción de rap intensa y apasionada que se centra en los desafíos y luchas de ser un artista y una persona que se niega a conformarse con las normas y expectativas sociales. Las letras son crudas y poderosas, transmitiendo una sensación de frustración, ira y desafío.";
+    }
+
+    if(loggedInUsername.cancionSonando === "Ciro y los persas - Caminando"){
+        songAside.src= '../img/ciro cancion 3.jpg';
+        texto.textContent = "La canción Caminando de Ciro y los Persas explora temas de resiliencia, determinación y abrazar la individualidad. Las letras describen el viaje del narrador, quien navega por los desafíos de la vida con un sentido de propósito y confianza en sí mismo.";
+    }
+
+    if(loggedInUsername.cancionSonando === "Wos - Live Set"){
+        songAside.src= '../img/wos cancion 4.jpg';
+        texto.textContent = "La canción FREESTYLE (Live Set) de WOS explora temas de autoexpresión, libertad y luchas internas. Las letras profundizan en el viaje introspectivo del artista, abrazando su identidad única y encontrando consuelo en su arte."
+    }
+    
+    if(loggedInUsername.cancionSonando === "Tupac - Only God Can Judge Me"){
+        songAside.src= '../img/tupac album 5.jpg';
+        texto.textContent = "La canción Only God Can Judge Me de 2Pac (ft. Rappin' 4-Tay) explora la vida de los afroamericanos que viven en los guetos de Estados Unidos, donde se enfrentan a diario a la pobreza, la delincuencia y el racismo.";
+    }
+
+    if(loggedInUsername.cancionSonando === "Aerosmith - I Don't Want to Miss a Thing"){
+        songAside.src= '../img/Idontwanttomissathing cancion 6.jpg';
+        texto.textContent = "La canción I Don't Want to Miss a Thing de Aerosmith es una declaración de amor y devoción"
+    }
+
     cancion1.addEventListener("click", function() {
         songAside.src= '../img/canserbero cancion 1.jpg';
         texto.textContent = "La canción Na de Canserbero es una canción de rap intensa y apasionada que se centra en los desafíos y luchas de ser un artista y una persona que se niega a conformarse con las normas y expectativas sociales. Las letras son crudas y poderosas, transmitiendo una sensación de frustración, ira y desafío.";
         loggedInUsername.cancionSonando = "Canserbero - Na";
-        localStorage.setItem('loggedInUser', JSON.stringify(loggedInUsername));
-        
-    })
-
-    cancion2.addEventListener("click", function() {
-        songAside.src= '../img/salando las heridas cancion 2.jpg';
-        texto.textContent = "La canción Salando las Heridas de Patricio Rey y sus Redonditos de Ricota explora temas de traición, supervivencia y las consecuencias de las acciones de uno. A través de imágenes vívidas y lenguaje metafórico, las letras pintan un cuadro de una persona que ha engañado y dañado repetidamente a otros pero que ahora enfrenta las repercusiones.";
-        loggedInUsername.cancionSonando = "Los Redondos - Salando las heridas";
         localStorage.setItem('loggedInUser', JSON.stringify(loggedInUsername));
         
     })
@@ -180,20 +198,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // ESTRELLA CANCION
-    starsSong.forEach((star, index) => {
+    starsSong.forEach((star) => {
         star.addEventListener("click", () => {
             // Verificar si el álbum ya es un favorito
-            const isFavorite = star.getAttribute("alt");
-            
-
-            if (isFavorite) {
+            const cancionSeleccionada = star.getAttribute("alt");
+            let cancionesFiltradas;
+            console.log(cancionSeleccionada);
+        
+            if (cancionSeleccionada) {
                 // Si ya es un favorito, quitarlo de la lista de favoritos y actualizar el estilo
-                cancionesFavoritas.splice(index, 1);
+                cancionesFiltradas = cancionesFavoritas.filter(song => song !== cancionSeleccionada);
                 
             }
 
             // Actualizar la lista de álbumes favoritos del usuario en el objeto del usuario
-            loggedInUsername.cancionesFavoritas = cancionesFavoritas;
+            loggedInUsername.cancionesFavoritas = cancionesFiltradas;
 
             // Actualizar el objeto del usuario en el localStorage
             localStorage.setItem('loggedInUser', JSON.stringify(loggedInUsername));
@@ -256,28 +275,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p>17.135.570</p>
                 </article>
                 `;
-            }
-    
-            if(cancion === "Patricio Rey y sus redonditos de ricota - Salando las heridas"){
-                cancionesContainer.innerHTML += `  
-                <article class="songs__content" id="fila2BotonPlay">
-                    <img src="../img/boton play.png" alt="Reproducir" width="90px" class="songs__button-img">
-                </article>
-                <article class="songs__content" id="fila2Cancion">
-                    <img class="songs__image songs" id="song__second" src="../img/salando las heridas cancion 2.jpg" alt="Patricio Rey y sus redonditos de ricota - Salando las heridas" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star fav-song selected" alt="Patricio Rey y sus redonditos de ricota - Salando las heridas">
-                </article>
-                <article class="songs__content" id="fila2Album">
-                    <img class="songs__image" src="../img/patricio-rey-logo-3048C74D38-seeklogo.com.png" alt="La Mosca y La Sopa" width="201vh">
-                    <img src="../img/estrella.png" class="songs__star fav-album" id="sacarVista">
-                </article>
-                <article class="songs__info" id="fila2Duracion">
-                    <p>5:02</p>
-                </article>
-                <article class="songs__info" id="fila2Reproducciones">
-                    <p>4.063.894</p>
-                </article>
-                `;
+
             }
     
             if(cancion === "Ciro - Caminando"){
@@ -370,4 +368,3 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 });
-

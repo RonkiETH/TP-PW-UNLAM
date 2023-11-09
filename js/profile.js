@@ -41,6 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("users", JSON.stringify(newUsersArray));
         localStorage.removeItem("loggedInUser");
     });
+
+    if(loggedInUser.premium == true) {
+        const linkPremium = document.querySelector(".form__linkpremium")
+        linkPremium.style.display = "none";
+    }
   //Modificar User
     saveButton.addEventListener("click", function (event) {
         event.preventDefault(); // Evita que el formulario se envíe

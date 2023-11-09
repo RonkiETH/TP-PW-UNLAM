@@ -60,6 +60,8 @@ function validarCampos() {
     if (cardRegex.test(card) && cvcRegex.test(cvc)) {
         alert('Pago exitoso');
         const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        loggedInUser.premium = true;
+        localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
         
         if (loggedInUser) {
             window.location.href = 'home.html';
