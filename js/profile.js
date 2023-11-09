@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Evita que el formulario se envíe
 
         const userExists = users.some(
-        (user) => user.username === username.value || user.email === email.value
+        (user) => user.username === username.value 
         );
         if (userExists) {
-            alert("El nombre de usuario o el email ya existen. Por favor, elija otro.");
+            alert("El nombre de usuario ya existe. Por favor, elija otro.");
             datosGuardados = false;
         return;
         } else {
