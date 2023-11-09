@@ -9,8 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
     if (loggedInUser) {
-        // Si el usuario está registrado, muestra el nombre de usuario
+        // Si el usuario está registrado, muestra el nombre de usuario y la opción de cerrar sesión
         profileTitle.textContent = loggedInUser.username;
+
+        // Agregar un evento al enlace de "Cerrar sesión" para marcar que el usuario cerró sesión
+        profileLinkSession.addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser'); // Marcar que el usuario cerró sesión
+            profileTitle.textContent = 'Nombre de usuario'; // Restablecer el nombre de usuario en la interfaz
+        });
     } else {
         // Si el usuario no está registrado, muestra un valor predeterminado o un mensaje
         profileTitle.textContent = 'Nombre de usuario'; // Puedes personalizar el mensaje para invitados
