@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const profileTitle = document.querySelector('.profile__title');
   const songsSection = document.querySelector(".songs__section");
+  const profileLinkSession = document.querySelector('.profile__link-session');
 
   // Cargar los usuarios desde el localStorage
   const users = JSON.parse(localStorage.getItem('users'));
